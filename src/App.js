@@ -13,7 +13,6 @@ const App = () => {
   ];
 
   const initialFormState = { id: null, name: "", username: "" };
-
   // Setting state
   const [users, setUsers] = useState(usersData);
   const [currentUser, setCurrentUser] = useState(initialFormState);
@@ -33,13 +32,11 @@ const App = () => {
 
   const updateUser = (id, updatedUser) => {
     setEditing(false);
-
     setUsers(users.map(user => (user.id === id ? updatedUser : user)));
   };
 
   const editRow = user => {
     setEditing(true);
-
     setCurrentUser({
       id: user.id,
       firstname: user.firstname,
@@ -68,8 +65,12 @@ const App = () => {
         )}
       </div>
       <div className="col-12">
-        <h2 className="mb-4">View users</h2>
-        <UserTable users={users} editRow={editRow} deleteUser={deleteUser} />
+        <h2 className="mb-4 mt-4">View users</h2>
+        <UserTable
+          users={users}
+          editRow={editRow}
+          deleteUser={deleteUser}
+        />
       </div>
     </Layout>
   );

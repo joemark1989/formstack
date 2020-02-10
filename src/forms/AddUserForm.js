@@ -23,22 +23,28 @@ const AddUserForm = props => {
       <div className="form-group">
         <label>First Name</label>
         <input
+          className="form-control col"
           type="text"
           name="firstname"
           value={user.firstname}
           onChange={handleInputChange}
+          placeholder="First Name"
+          required
         />
       </div>
       <div className="form-group">
         <label>Last Name</label>
         <input
+          className="form-control col"
           type="text"
           name="lastname"
           value={user.lastname}
           onChange={handleInputChange}
+          placeholder="Last Name"
+          required
         />
       </div>
-      <button className="btn btn-primary mt-2">Add new user</button>
+      <button className="btn btn-primary">Add new user</button>
     </form>
   );
 };

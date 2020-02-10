@@ -1,3 +1,4 @@
+/* general styling */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +6,33 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(231, 231, 231);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* styling for tables */
+
+td {
+  vertical-align: middle !important;
+}
+
+td > .btn {
+  width: 70px;
+}
+
+@media only screen and (max-width: 325px) {
+  td > .btn {
+    margin-top: 10px;
+  }
+}
+
+/* styling for text field inputs */
+
+.form-control {
+  width: 200px !important;
+}
+
